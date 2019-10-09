@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Random quote generator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="ron.css">
+
+</head>
+
+<body>
+    <h1>Ron Swanson Quote Generator</h1>
+    <img src="ron.jpg" alt="">
+    <p>(4 different AJAX requests types)</p>
+    <section class="container">
+        <button id="xhr">XHR</button>
+        <button id="fetch">Fetch</button>
+        <button id="jquery">jQuery</button>
+        <button id="axios">Axios</button>
+    </section>
+
+
+    <p id="quote">Quote Goes Here... Click on any of the buttons!</p>
+
+    <div>Quotes are generated with 4 different types of AJAX requests to get a random quote from fictional character - Ron
+        Swanson</div>
+    <div>XHR is a vanillaJS XMLHttpRequest to get the data from the api</div>
+    <div>Fetch uses promises - .then and .catch for errors and req.json() for parsing the response</div>
+    <div>jQuery uses build-in methods .done and .fail for errors, parsing is done automatically using $.getJSON function
+    </div>
+    <div>Axios uses promises; axios.get(url) returns JSON object so no parsing is needed </div>
+    <hr>
+<!-- random dog part -->
+    <h1 class="u-padding-top">Random dog generator</h1>
+    <div class="container-dog">
+        <h1>This is a random dog picuture app</h1>
+        <img src="https://images.dog.ceo/breeds/pug/n02110958_5834.jpg" id="dog-image" alt="there should be a picture here">
+        <button id="btn-dog" >Get random dog</button>
+    </div>
+
+    <div class="u-padding-top">Dog photos are uploaded using dog.ceo api </div>
+    <div>Site uses vanillaJS XMLHttpRequest to get the data from the api</div>
+    <div>Response is parsed using JSON.parse and dog photo img tag source is updated with the API property </div>
+    <div>It is AJAX request as the code waits for the request to be ready and performed without errors (XHR.readyState
+        == 4 && XHR.status == 200) </div>
+
+    <hr>
+<!-- Bitcoin part -->
+    <h1 class="u-padding-top">Current Bitcoin Price is: <span id="price-btc"></span></h1>
+    <div class="container-btc">
+        <button id="btn-btc">Refresh Data</button>
+        <h4>You can refresh price once every 60 seconds</h4>
+    </div>
+
+    <div>Bitcoin price uses coindesk.com api to access current price of bitcoin in US Dollars</div>
+    <div>Site uses vanillaJS XMLHttpRequest to get the data from the api</div>
+    <div>Response is parsed using JSON.parse and presented on the website using textContent property</div>
+    <div>It is AJAX request as the code waits for the request to be ready and performed without errors (XHR.readyState
+        == 4 && XHR.status == 200) </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="ron.js"></script>
+
+
+</body>
+
+</html>
